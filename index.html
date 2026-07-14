@@ -14,6 +14,7 @@
     <meta name="geo.position" content="51.8985;-8.4756">
     <meta name="ICBM" content="51.8985, -8.4756">
     <link rel="canonical" href="https://www.elevaterenovation.ie/">
+	<link rel="icon" type="images/jpeg" href="./images/logo.jpeg">
     
     <!-- ========== SOCIAL MEDIA & OPEN GRAPH (Facebook/LinkedIn) ========== -->
     <meta property="og:title" content="Elevate Home Renovation - Quality Renovations in Cork">
@@ -110,558 +111,648 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
+<style>
     :root { 
-        --gold: #d4af37; 
-        --dark: #1a2744; 
-        --light-bg: #f9f9f9;
+        /* The exact luxurious cream color pulled from your logo file */
+        --light-bg: #f4f1ea; 
+        
+        /* Premium dark charcoal for strong, professional contrast */
+        --dark: #1a1a1a; 
+        
+        /* Elegant grey for structural outlines and subtle elements */
+        --logo-grey: #666666; 
+        /* Boosted border opacity so structural dividers are clearly visible */
+        --border-color: rgba(26, 26, 26, 0.40);
     }
     
-    body { font-family: 'Poppins', sans-serif; background: var(--light-bg); color: #333; margin: 0; line-height: 1.6; }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     
-    .header { background: var(--dark); padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; color: white; border-bottom: 3px solid var(--gold); }
+    body { 
+        font-family: 'Poppins', sans-serif; 
+        background-color: var(--light-bg); 
+        color: var(--dark); 
+        line-height: 1.6; 
+        overflow-x: hidden; 
+    }
     
-    .hero { background: linear-gradient(rgba(26, 39, 68, 0.9), rgba(26, 39, 68, 0.9)), url('images/hero-bg.jpg'); background-size: cover; color: white; text-align: center; padding: 120px 20px; }
+    /* ========== HEADER SECTION ========== */
+    .header {
+        background: var(--light-bg); 
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--border-color);
+    }
     
-    .section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
     
-    /* تحسين البطاقات (إضافة تأثير الظل العميق) */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .card { 
-        background: white; 
-        padding: 20px; 
-        border-radius: 12px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    .logo-img {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 6px;
+        /* Blends out the image background to match the website theme perfectly */
+        mix-blend-mode: multiply;
+        display: block;
+    }
+    
+    .logo-text {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--dark);
+        letter-spacing: 2px;
+    }
+    
+    /* Contact Action Container holding the primary number and grid */
+    .header-contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .phone-btn {
+        background: var(--dark);
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-btn:hover {
+        background: var(--logo-grey);
+    }
+
+    /* Grid layout positioning the smaller action links right under the main button */
+    .quick-links-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        width: 100%;
+    }
+
+    /* Minimalist sub-buttons styling */
+    .quick-icon-btn {
+        font-size: 12px; 
+        font-weight: 700; 
+        text-decoration: none;
+        padding: 6px 12px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        transition: all 0.2s ease-in-out;
+        background-color: transparent;
+    }
+
+    /* Sharp, clear styling for the WhatsApp header link */
+    .quick-icon-btn.whatsapp-color {
+        color: #1ebea5; 
+        border: 2px solid #1ebea5; 
+    }
+    .quick-icon-btn.whatsapp-color:hover {
+        background-color: #1ebea5;
+        color: #ffffff;
+    }
+
+    /* Sharp, clear styling for the Email header link */
+    .quick-icon-btn.email-color {
+        color: var(--dark); 
+        border: 2px solid var(--dark); 
+    }
+    .quick-icon-btn.email-color:hover {
+        background-color: var(--dark);
+        color: #ffffff;
+    }
+    
+    /* ========== LOCATION BAR ========== */
+    .location-bar {
+        background: var(--dark);
+        color: #ffffff;
+        text-align: center;
+        padding: 12px;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+    
+    /* ========== HERO SECTION ========== */
+    .hero {
+        background: var(--light-bg); 
+        padding: 60px 20px 50px;
+        text-align: center;
+    }
+
+    .hero-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px; 
+    }
+
+    .hero-main-logo {
+        max-width: 400px;    
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        /* Ensures the large center logo also blends smoothly with the background */
+        mix-blend-mode: multiply;
+    }
+    
+    .hero-desc {
+        font-size: 18px;
+        color: #222222; 
+        max-width: 650px;
+        margin: 0 auto 35px;
+        line-height: 1.6;
+        font-weight: 600;
+    }
+    
+    .service-tags {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .service-tag {
+        border: 2px solid var(--dark); 
+        color: var(--dark); 
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    /* ========== PROJECTS / GALLERY SECTION ========== */
+    .gallery-section {
+        padding: 50px 20px;
+        background: var(--light-bg); 
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+        color: #333333; 
+        margin-bottom: 45px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .project-card {
+        background: #ffffff; 
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 0px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         transition: transform 0.3s ease;
     }
-    .card:hover { transform: translateY(-10px); }
-    .card img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
     
-    /* تحسين النصوص */
-    h2 { color: var(--dark); font-size: 32px; margin-bottom: 20px; text-align: center; }
-    .about-text { color: #444; font-size: 18px; line-height: 1.8; text-align: center; max-width: 800px; margin: auto; }
+    .project-card img,
+    .project-card video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
     
-    .btn { background: var(--gold); color: var(--dark); padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 25px; transition: 0.3s; }
-    .btn:hover { background: #b8962d; transform: scale(1.05); }
+    .project-info {
+        padding: 25px;
+        background: #ffffff;
+    }
     
-    /* تحسين نموذج التواصل */
-    form { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-    input, textarea { width: 100%; padding: 15px; margin: 15px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-family: inherit; }
+    .project-info h3 {
+        color: var(--dark);
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
     
-    .wa-btn { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 18px 22px; border-radius: 50%; font-size: 28px; z-index: 1000; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+    .project-info p {
+        color: #222222; 
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .view-btn {
+        background: var(--dark);
+        color: #ffffff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 700;
+        cursor: pointer;
+        width: 100%; 
+        transition: all 0.3s ease;
+    }
+    
+    .view-btn:hover {
+        background: var(--logo-grey);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1a2744;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        
-        /* Header */
-        .header {
-            background: #1a2744;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: #d4af37;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-        }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: 800;
-            color: #d4af37;
-            letter-spacing: 2px;
-        }
-        
-        .menu-btn {
-            color: #d4af37;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        
-        .phone-btn {
-            background: #d4af37;
-            color: #1a2744;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-        }
-        
-        /* Location Bar */
-        .location-bar {
-            background: #d4af37;
-            color: #1a2744;
-            text-align: center;
-            padding: 12px;
-            font-weight: 600;
-            font-size: 15px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 60px 20px 40px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .hero-icon {
-            font-size: 80px;
-        }
-        
-        .hero-title {
-            font-size: 52px;
-            font-weight: 800;
-            color: #d4af37;
-            letter-spacing: 8px;
-            margin-bottom: 10px;
-        }
-        
-        .hero-subtitle {
-            font-size: 28px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 20px;
-        }
-        
-        .hero-desc {
-            font-size: 16px;
-            color: rgba(255,255,255,0.7);
-            max-width: 500px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-        
-        .service-tags {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .service-tag {
-            border: 2px solid #d4af37;
-            color: #d4af37;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* Gallery Section */
-        .gallery-section {
-            padding: 60px 20px;
-            background: linear-gradient(180deg, #1a2744 0%, #0f1a2e 100%);
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 40px;
-            font-size: 15px;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            aspect-ratio: 4/3;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(26, 39, 68, 0.95));
-            padding: 30px 20px 20px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-        
-        .gallery-overlay h3 {
-            color: #d4af37;
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .gallery-overlay p {
-            color: rgba(255,255,255,0.8);
-            font-size: 13px;
-        }
-        
-        .services-section {
-            padding: 60px 20px;
-            background: linear-gradient(180deg, #0f1a2e 0%, #1a2744 100%);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .service-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 16px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            background: rgba(212, 175, 55, 0.1);
-            transform: translateY(-5px);
-            border-color: #d4af37;
-        }
-        
-        .service-card i {
-            font-size: 40px;
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
-        
-        .service-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-        
-        .service-card p {
-            font-size: 13px;
-            color: rgba(255,255,255,0.6);
-            line-height: 1.6;
-        }
-        
-        .cta-section {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #1a2744 0%, #0f1a2e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
-        }
-        
-        .cta-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-title {
-            font-size: 36px;
-            font-weight: 800;
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
-        
-        .cta-desc {
-            font-size: 16px;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 30px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-btn {
-            background: #d4af37;
-            color: #1a2744;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-        }
-        
-        .footer {
-            background: #0f1a2e;
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        
-        .footer-logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
-        
-        .footer-contact {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        
-        .footer-contact a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        
-        .footer-contact a:hover {
-            color: #d4af37;
-        }
-        
-        .footer-contact i {
-            color: #d4af37;
-        }
-        
-        .copyright {
-            color: rgba(255,255,255,0.4);
-            font-size: 13px;
-        }
-        
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .lightbox.active {
-            display: flex;
-        }
-        
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-            object-fit: contain;
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 40px;
-            cursor: pointer;
-            z-index: 2001;
-        }
-        
-        .project-card {
-            background: #0f1a2e;
-            border-radius: 18px;
-            overflow: hidden;
-            margin-bottom: 40px;
-            border: 1px solid rgba(212,175,55,0.2);
-        }
-        
-        .project-card img,
-        .project-card video {
-            width: 100%;
-            display: block;
-            border-radius: 12px;
-        }
-        
-        .project-info {
-            padding: 20px;
-        }
-        
-        .project-info h3 {
-            color: #d4af37;
-            margin-bottom: 10px;
-        }
-        
-        .project-info p {
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 20px;
-        }
-        
-        .view-btn {
-            background: #d4af37;
-            color: #1a2744;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        
-        .view-btn:hover {
-            transform: scale(1.05);
-        }
-        
-        .hidden-gallery {
-            display: none;
-            padding: 20px;
-            gap: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-        }
-        
-        .hidden-gallery.active {
-            display: grid;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-title { font-size: 36px; letter-spacing: 4px; }
-            .hero-subtitle { font-size: 20px; }
-            .hero-icon { font-size: 60px; }
-            .phone-btn { padding: 8px 15px; font-size: 12px; }
-            .logo-text { font-size: 18px; }
-        }
-        
-        .animate {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-    </style>
+    .hidden-gallery {
+        display: none;
+        padding: 20px;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        background: rgba(0, 0, 0, 0.04);
+        border-top: 1px solid var(--border-color);
+    }
+
+    .hidden-gallery.active {
+        display: grid;
+    }
+
+    .hide-btn {
+        background: var(--dark);
+        color: #ffffff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        grid-column: 1 / -1; 
+        margin-top: 10px;
+    }
+
+    .hide-btn:hover {
+        background: var(--logo-grey);
+    }
+    
+    /* ========== SERVICES SECTION ========== */
+    .services-section {
+        padding: 80px 20px;
+        background: var(--light-bg);
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    .service-card {
+        background: #ffffff;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 40px 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .service-card:hover {
+        border-color: var(--dark);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    }
+    
+    .service-card i {
+        font-size: 36px;
+        color: var(--dark); 
+        margin-bottom: 20px;
+    }
+    
+    .service-card h3 {
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--dark);
+    }
+    
+    .service-card p {
+        font-size: 14px;
+        color: #222222;
+        line-height: 1.6;
+    }
+    
+    /* ========== CALL TO ACTION SECTION ========== */
+    .cta-section {
+        padding: 90px 20px;
+        text-align: center;
+        background: var(--light-bg);
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .cta-title {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--dark);
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .cta-desc {
+        font-size: 16px;
+        color: #1a1a1a;
+        margin-bottom: 35px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+    }
+    
+    .cta-btn {
+        background: var(--dark);
+        color: #ffffff;
+        padding: 16px 45px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        margin-bottom: 20px; 
+    }
+    
+    .cta-btn:hover {
+        background: var(--logo-grey);
+        transform: scale(1.03);
+    }
+
+    /* Flex-row positioning layout for CTA sub-buttons */
+    .cta-secondary-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .cta-sub-btn {
+        flex: 1;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s ease-in-out;
+        background-color: transparent;
+    }
+
+    /* High contrast setup for CTA green WhatsApp */
+    .cta-sub-btn.cta-whatsapp {
+        color: #1ebea5;
+        border: 2px solid #1ebea5;
+    }
+    .cta-sub-btn.cta-whatsapp:hover {
+        background-color: #1ebea5;
+        color: #ffffff;
+    }
+
+    /* High contrast setup for CTA charcoal black Email */
+    .cta-sub-btn.cta-email {
+        color: var(--dark);
+        border: 2px solid var(--dark);
+    }
+    .cta-sub-btn.cta-email:hover {
+        background-color: var(--dark);
+        color: #ffffff;
+    }
+    
+    /* ========== COMPACT FOOTER LOGO SYSTEM ========== */
+    .footer {
+        background: var(--dark);
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .footer-logo-img {
+        width: 45px;
+        height: 45px;
+        min-width: 45px; 
+        object-fit: cover;
+        border-radius: 6px;
+        /* Inverts the dark grey logo lines into clean crisp white to read perfectly against the dark background footer */
+        filter: invert(1);
+        mix-blend-mode: screen;
+        display: block;
+    }
+
+    .footer-logo-text {
+        font-size: 20px;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: 2px;
+        white-space: nowrap; 
+    }
+    
+    .footer-contact {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+    
+    .footer-contact a,
+    .footer-contact .location-item {
+        color: rgba(255,255,255,0.85); 
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .footer-contact a:hover {
+        color: #ffffff;
+    }
+    
+    .footer-contact i {
+        font-size: 15px;
+        color: #ffffff;
+    }
+    
+    .copyright {
+        color: rgba(255,255,255,0.5);
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    /* ========== GENERAL LOGO UTILITY CLASS ========== */
+    .blend-logo {
+        mix-blend-mode: multiply;
+    }
+
+    /* ========== RESPONSIVENESS SYSTEM ========== */
+    @media (max-width: 768px) {
+        .hero-main-logo { max-width: 290px; } 
+        .phone-btn { padding: 8px 15px; font-size: 12px; }
+        .logo-text { font-size: 18px; }
+        .hero { padding: 40px 15px; }
+        .hero-desc { font-size: 15px; }
+        .section-title { font-size: 26px; }
+        
+        .footer { padding: 35px 15px; }
+        .footer-logo-text { font-size: 18px; }
+        .footer-contact { gap: 20px; }
+        .footer-contact a, .footer-contact .location-item { font-size: 13px; }
+    }
+
+    @media (max-width: 480px) {
+        .header { padding: 10px 12px; }
+        .logo-text { font-size: 15px; }
+        .logo-img { width: 35px; height: 35px; }
+        .phone-btn { padding: 6px 12px; font-size: 11px; }
+        
+        /* Mobile adjustment for CTA actions row */
+        .cta-secondary-actions { gap: 10px; padding: 0 10px; }
+        .cta-sub-btn { font-size: 12px; padding: 8px 12px; }
+
+        .quick-icon-btn { font-size: 11px; padding: 5px 8px; border-width: 2px; }
+        .footer-logo-text { font-size: 14px; letter-spacing: 1px; }
+        .footer-logo-img { width: 35px; height: 35px; min-width: 35px; }
+        .footer-contact { flex-direction: column; gap: 15px; }
+        .footer-contact a, .footer-contact .location-item { justify-content: center; }
+    }
+    
+    /* ========== NAVIGATION TABS ========== */
+    .nav-tabs {
+        display: flex;
+        gap: 20px;
+        margin-left: 30px;
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--logo-grey);
+        padding: 6px 4px;
+        letter-spacing: 0.5px;
+        transition: color 0.2s ease, border-color 0.2s ease;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-link:hover {
+        color: var(--dark);
+    }
+
+    .nav-link.active {
+        color: var(--dark);
+        border-bottom: 2px solid var(--dark); 
+    }
+
+    /* Hide navigation links inside the header on tiny mobile screens to avoid crowding */
+    @media (max-width: 480px) {
+        .nav-tabs { gap: 12px; margin-left: 15px; }
+        .nav-link { font-size: 13px; }
+    }
+</style>
+
 </head>
 <body>
 
 <header class="header">
-    <div class="logo-section" style="cursor:pointer;" onclick="goHome()">
-        <div class="logo-icon">🏠</div>
-        <div class="logo-text">ELEVATE</div>
-    </div>
-    <a href="tel:0830896669" class="phone-btn">
-        <i class="fas fa-phone"></i>
-        083 089 6669
+<div class="logo-section">
+    <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+        <img src="images/logo.jpeg" alt="Elevate Home Renovation Logo" class="logo-img">
+        <span class="logo-text">ELEVATE</span>
     </a>
+    
+		<nav class="nav-tabs">
+		<a href="index.html" class="nav-link active">Home</a>
+		<a href="about.html" class="nav-link">About Us</a>
+	</nav>
+</div>
+    
+    <div class="header-contact-container">
+        <a href="tel:0830896669" class="phone-btn">
+            <i class="fas fa-phone"></i> 083 089 6669
+        </a>
+        
+        <div class="quick-links-grid">
+            <a href="https://wa.me/353830896669?text=Hi%20Elevate%20Home%20Renovation,%20I'd%20like%20to%20get%20a%20free%20quote." target="_blank" class="quick-icon-btn whatsapp-color" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="#enquiry-form" class="quick-icon-btn email-color" title="Send Email Enquiry">
+			<i class="fas fa-envelope"></i> Email
+			</a>
+        </div>
+    </div>
 </header>
 
 <div class="location-bar">
     🌍 Serving Cork City, Douglas, Ballincollig, Carrigaline, Midleton & Nearby Villages
 </div>
 
-<section class="hero">
-    <div class="hero-icons animate">
-        <div class="hero-icon">🏠</div>
-        <div class="hero-icon">🔨</div>
+<section class="hero animate">
+    <div class="hero-logo-container">
+        <img src="images/logo2.jpeg" alt="Elevate Home Renovation" class="hero-main-logo">
     </div>
-    <h1 class="hero-title animate delay-1">ELEVATE</h1>
-    <h2 class="hero-subtitle animate delay-2">HOME RENOVATION</h2>
-    <p class="hero-desc animate delay-3">
+    
+    <p class="hero-desc">
         Transform your home with expert renovation services in Cork. Quality craftsmanship, on-time completion, and affordable pricing.
     </p>
-    <div class="service-tags animate delay-4">
-        <span class="service-tag">Build</span>
-        <span class="service-tag">Renovate</span>
-        <span class="service-tag">Garden</span>
-        <span class="service-tag">Decor</span>
+    
+    <div class="service-tags">
+        <span class="service-tag">BUILD</span>
+        <span class="service-tag">RENOVATE</span>
+        <span class="service-tag">GARDEN</span>
+		<span class="service-tag">DECOR</span>
     </div>
 </section>
 
@@ -669,22 +760,239 @@
     <h2 class="section-title">Our Renovation Projects</h2>
     <p class="section-subtitle">Real transformations across Cork homes</p>
     <div class="gallery-grid" id="projectsGrid">
-        <!-- Projects 1-15 are kept same as original but summary preserved -->
-        <div class="project-card"><img src="images/Assembly galvanized shed2.jpeg" alt="Galvanized shed assembly"><div class="project-info"><h3>Assembly galvanized shed</h3><p>Professional assembly, secure galvanized steel structure.</p><button class="view-btn" onclick="toggleProject('project1-gallery')">View More</button></div><div class="hidden-gallery" id="project1-gallery"><img src="images/Assembly galvanized shed1.jpeg"><img src="images/Assembly galvanized shed2.jpeg"><video controls><source src="videos/Assembly galvanized shed.mp4" type="video/mp4"></video></div></div>
-        <div class="project-card"><img src="images/Building concrete stairs1.jpeg" alt="Concrete stairs"><div class="project-info"><h3>Building concrete stairs</h3><p>Reinforced concrete stairs with smooth finish.</p><button class="view-btn" onclick="toggleProject('project2-gallery')">View More</button></div><div class="hidden-gallery" id="project2-gallery"><img src="images/Building concrete stairs1.jpeg"><img src="images/Building concrete stairs2.jpeg"><video controls><source src="videos/Building concrete stairs.mp4" type="video/mp4"></video></div></div>
-        <div class="project-card"><img src="images/Interior painting1.jpeg" alt="Interior painting Cork"><div class="project-info"><h3>Interior painting</h3><p>Crisp lines, smooth modern finishes.</p><button class="view-btn" onclick="toggleProject('project3-gallery')">View More</button></div><div class="hidden-gallery" id="project3-gallery"><img src="images/Interior painting1.jpeg"><img src="images/Interior painting2.jpeg"><video controls><source src="videos/Interior painting.mp4" type="video/mp4"></video></div></div>
-        <div class="project-card"><img src="images/Decorations panel2.jpeg" alt="Decorative panels"><div class="project-info"><h3>Decorations panel</h3><p>Modern decorative interior panels.</p><button class="view-btn" onclick="toggleProject('project4-gallery')">View More</button></div><div class="hidden-gallery" id="project4-gallery"><img src="images/Decorations panel1.jpeg"><img src="images/Decorations panel2.jpeg"></div></div>
-        <div class="project-card"><img src="images/Replace a gutter and fascia1.jpeg" alt="Gutter and fascia replacement"><div class="project-info"><h3>Replace a gutter and fascia</h3><p>Weather-ready finish, reinforced support.</p><button class="view-btn" onclick="toggleProject('project5-gallery')">View More</button></div><div class="hidden-gallery" id="project5-gallery"><img src="images/Replace a gutter and fascia1.jpeg"><img src="images/Replace a gutter and fascia2.jpeg"><video controls><source src="videos/Replace a gutter and fascia1.mp4" type="video/mp4"></video></div></div>
-        <div class="project-card"><img src="images/Assembly IKEA furniture1.jpeg" alt="IKEA furniture assembly"><div class="project-info"><h3>Assembly IKEA furniture</h3><p>Precise alignment, polished assembly.</p><button class="view-btn" onclick="toggleProject('project6-gallery')">View More</button></div><div class="hidden-gallery" id="project6-gallery"><img src="images/Assembly IKEA furniture1.jpeg"><img src="images/Assembly IKEA furniture2.jpeg"><img src="images/Assembly IKEA furniture3.jpeg"><img src="images/Assembly IKEA furniture4.jpeg"></div></div>
-        <div class="project-card"><img src="images/Blocks and bricks work1.jpeg" alt="Brickwork Cork"><div class="project-info"><h3>Blocks and bricks work</h3><p>Strong foundations, quality masonry.</p><button class="view-btn" onclick="toggleProject('project7-gallery')">View More</button></div><div class="hidden-gallery" id="project7-gallery"><img src="images/Blocks and bricks work1.jpeg"><img src="images/Blocks and bricks work2.jpeg"><img src="images/Blocks and bricks work3.jpeg"><img src="images/Blocks and bricks work4.jpeg"><video controls><source src="videos/Blocks and bricks work.mp4" type="video/mp4"></video></div></div>
-        <div class="project-card"><img src="images/Fitting patio door1.jpeg" alt="Patio door fitting"><div class="project-info"><h3>Fitting patio door</h3><p>Smooth operation, secure installation.</p><button class="view-btn" onclick="toggleProject('project8-gallery')">View More</button></div><div class="hidden-gallery" id="project8-gallery"><img src="images/Fitting patio door1.jpeg"><img src="images/Fitting patio door2.jpeg"></div></div>
-        <div class="project-card"><img src="images/External panting1.jpeg" alt="External painting Cork"><div class="project-info"><h3>External painting</h3><p>Weather-resistant exterior painting.</p><button class="view-btn" onclick="toggleProject('project9-gallery')">View More</button></div><div class="hidden-gallery" id="project9-gallery"><img src="images/External panting1.jpeg"><img src="images/External panting2.jpeg"><img src="images/External panting3.jpeg"></div></div>
-        <div class="project-card"><img src="images/Wall tiling3.jpeg" alt="Wall tiling"><div class="project-info"><h3>Wall tiling</h3><p>Precision cuts, even spacing.</p><button class="view-btn" onclick="toggleProject('project10-gallery')">View More</button></div><div class="hidden-gallery" id="project10-gallery"><img src="images/Wall tiling1.jpeg"><img src="images/Wall tiling2.jpeg"></div></div>
-        <div class="project-card"><img src="images/Landscaping1.jpeg" alt="Landscaping Cork"><div class="project-info"><h3>Landscaping</h3><p>Fresh greenery, transformed outdoors.</p><button class="view-btn" onclick="toggleProject('project11-gallery')">View More</button></div><div class="hidden-gallery" id="project11-gallery"><img src="images/Landscaping1.jpeg"><img src="images/Landscaping2.jpeg"><img src="images/Landscaping3.jpeg"><img src="images/Landscaping4.jpeg"></div></div>
-        <div class="project-card"><img src="images/Patio power washe cleaning1.jpeg" alt="Patio power wash"><div class="project-info"><h3>Patio power wash cleaning</h3><p>Deep cleaning, like-new finish.</p><button class="view-btn" onclick="toggleProject('project12-gallery')">View More</button></div><div class="hidden-gallery" id="project12-gallery"><img src="images/Patio power washe cleaning1.jpeg"><img src="images/Patio power washe cleaning2.jpeg"><img src="images/Patio power washe cleaning3.jpeg"><img src="images/Patio power washe cleaning4.jpeg"></div></div>
-        <div class="project-card"><img src="images/Bathroom renovation1.jpeg" alt="Bathroom renovation Cork"><div class="project-info"><h3>Bathroom renovation</h3><p>Complete modern bathrooms, high-quality finish.</p><button class="view-btn" onclick="toggleProject('project13-gallery')">View More</button></div><div class="hidden-gallery" id="project13-gallery"><img src="images/Bathroom renovation1.jpeg"><img src="images/Bathroom renovation2.jpeg"><img src="images/Bathroom renovation3.jpeg"><img src="images/Bathroom renovation4.jpeg"><img src="images/Bathroom renovation5.jpeg"><img src="images/Bathroom renovation6.jpeg"></div></div>
-        <div class="project-card"><img src="images/Fitting artificial grass1.jpeg" alt="Artificial grass fitting"><div class="project-info"><h3>Fitting artificial grass</h3><p>Smooth leveling, low-maintenance finish.</p><button class="view-btn" onclick="toggleProject('project14-gallery')">View More</button></div><div class="hidden-gallery" id="project14-gallery"><img src="images/Fitting artificial grass1.jpeg"><img src="images/Fitting artificial grass2.jpeg"><video controls><source src="videos/Fitting artificial grass.mp4" type="video/mp4"></video></div></div>
-        <div class="project-card"><img src="images/Tiling1.jpeg" alt="Tiling services"><div class="project-info"><h3>Tiling</h3><p>Precision tiling, clean grout lines.</p><button class="view-btn" onclick="toggleProject('project15-gallery')">View More</button></div><div class="hidden-gallery" id="project15-gallery"><img src="images/Tiling1.jpeg"><img src="images/Tiling2.jpeg"><img src="images/Tiling3.jpeg"><img src="images/Tiling4.jpeg"><video controls><source src="videos/project15.mp4" type="video/mp4"></video></div></div>
+
+        <div class="project-card">
+            <img src="images/Assembly galvanized shed2.jpeg" alt="Galvanized shed assembly">
+            <div class="project-info">
+                <h3>Assembly galvanized shed</h3>
+                <p>Professional assembly, secure galvanized steel structure.</p>
+                <button id="btn-more-1" class="view-btn" onclick="toggleProject(1)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project1-gallery">
+                <img src="images/Assembly galvanized shed1.jpeg">
+                <img src="images/Assembly galvanized shed2.jpeg">
+                <video controls><source src="videos/Assembly galvanized shed.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(1)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Building concrete stairs1.jpeg" alt="Concrete stairs">
+            <div class="project-info">
+                <h3>Building concrete stairs</h3>
+                <p>Reinforced concrete stairs with smooth finish.</p>
+                <button id="btn-more-2" class="view-btn" onclick="toggleProject(2)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project2-gallery">
+                <img src="images/Building concrete stairs1.jpeg">
+                <img src="images/Building concrete stairs2.jpeg">
+                <video controls><source src="videos/Building concrete stairs.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(2)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Interior painting1.jpeg" alt="Interior painting Cork">
+            <div class="project-info">
+                <h3>Interior painting</h3>
+                <p>Crisp lines, smooth modern finishes.</p>
+                <button id="btn-more-3" class="view-btn" onclick="toggleProject(3)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project3-gallery">
+                <img src="images/Interior painting1.jpeg">
+                <img src="images/Interior painting2.jpeg">
+                <video controls><source src="videos/Interior painting.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(3)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Decorations panel2.jpeg" alt="Decorative panels">
+            <div class="project-info">
+                <h3>Decorations panel</h3>
+                <p>Modern decorative interior panels.</p>
+                <button id="btn-more-4" class="view-btn" onclick="toggleProject(4)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project4-gallery">
+                <img src="images/Decorations panel1.jpeg">
+                <img src="images/Decorations panel2.jpeg">
+                <button class="hide-btn" onclick="toggleProject(4)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Replace a gutter and fascia1.jpeg" alt="Gutter and fascia replacement">
+            <div class="project-info">
+                <h3>Replace a gutter and fascia</h3>
+                <p>Weather-ready finish, reinforced support.</p>
+                <button id="btn-more-5" class="view-btn" onclick="toggleProject(5)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project5-gallery">
+                <img src="images/Replace a gutter and fascia1.jpeg">
+                <img src="images/Replace a gutter and fascia2.jpeg">
+                <video controls><source src="videos/Replace a gutter and fascia1.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(5)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Assembly IKEA furniture1.jpeg" alt="IKEA furniture assembly">
+            <div class="project-info">
+                <h3>Assembly IKEA furniture</h3>
+                <p>Precise alignment, polished assembly.</p>
+                <button id="btn-more-6" class="view-btn" onclick="toggleProject(6)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project6-gallery">
+                <img src="images/Assembly IKEA furniture1.jpeg">
+                <img src="images/Assembly IKEA furniture2.jpeg">
+                <img src="images/Assembly IKEA furniture3.jpeg">
+                <img src="images/Assembly IKEA furniture4.jpeg">
+                <button class="hide-btn" onclick="toggleProject(6)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Blocks and bricks work1.jpeg" alt="Brickwork Cork">
+            <div class="project-info">
+                <h3>Blocks and bricks work</h3>
+                <p>Strong foundations, quality masonry.</p>
+                <button id="btn-more-7" class="view-btn" onclick="toggleProject(7)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project7-gallery">
+                <img src="images/Blocks and bricks work1.jpeg">
+                <img src="images/Blocks and bricks work2.jpeg">
+                <img src="images/Blocks and bricks work3.jpeg">
+                <img src="images/Blocks and bricks work4.jpeg">
+                <video controls><source src="videos/Blocks and bricks work.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(7)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Fitting patio door1.jpeg" alt="Patio door fitting">
+            <div class="project-info">
+                <h3>Fitting patio door</h3>
+                <p>Smooth operation, secure installation.</p>
+                <button id="btn-more-8" class="view-btn" onclick="toggleProject(8)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project8-gallery">
+                <img src="images/Fitting patio door1.jpeg">
+                <img src="images/Fitting patio door2.jpeg">
+                <button class="hide-btn" onclick="toggleProject(8)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/External panting1.jpeg" alt="External painting Cork">
+            <div class="project-info">
+                <h3>External painting</h3>
+                <p>Weather-resistant exterior painting.</p>
+                <button id="btn-more-9" class="view-btn" onclick="toggleProject(9)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project9-gallery">
+                <img src="images/External panting1.jpeg">
+                <img src="images/External panting2.jpeg">
+                <img src="images/External panting3.jpeg">
+                <button class="hide-btn" onclick="toggleProject(9)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Wall tiling3.jpeg" alt="Wall tiling">
+            <div class="project-info">
+                <h3>Wall tiling</h3>
+                <p>Precision cuts, even spacing.</p>
+                <button id="btn-more-10" class="view-btn" onclick="toggleProject(10)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project10-gallery">
+                <img src="images/Wall tiling1.jpeg">
+                <img src="images/Wall tiling2.jpeg">
+                <button class="hide-btn" onclick="toggleProject(10)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Landscaping1.jpeg" alt="Landscaping Cork">
+            <div class="project-info">
+                <h3>Landscaping</h3>
+                <p>Fresh greenery, transformed outdoors.</p>
+                <button id="btn-more-11" class="view-btn" onclick="toggleProject(11)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project11-gallery">
+                <img src="images/Landscaping1.jpeg">
+                <img src="images/Landscaping2.jpeg">
+                <img src="images/Landscaping3.jpeg">
+                <img src="images/Landscaping4.jpeg">
+                <button class="hide-btn" onclick="toggleProject(11)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Patio power washe cleaning1.jpeg" alt="Patio power wash">
+            <div class="project-info">
+                <h3>Patio power wash cleaning</h3>
+                <p>Deep cleaning, like-new finish.</p>
+                <button id="btn-more-12" class="view-btn" onclick="toggleProject(12)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project12-gallery">
+                <img src="images/Patio power washe cleaning1.jpeg">
+                <img src="images/Patio power washe cleaning2.jpeg">
+                <img src="images/Patio power washe cleaning3.jpeg">
+                <img src="images/Patio power washe cleaning4.jpeg">
+                <button class="hide-btn" onclick="toggleProject(12)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Bathroom renovation1.jpeg" alt="Bathroom renovation Cork">
+            <div class="project-info">
+                <h3>Bathroom renovation</h3>
+                <p>Complete modern bathrooms, high-quality finish.</p>
+                <button id="btn-more-13" class="view-btn" onclick="toggleProject(13)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project13-gallery">
+                <img src="images/Bathroom renovation1.jpeg">
+                <img src="images/Bathroom renovation2.jpeg">
+                <img src="images/Bathroom renovation3.jpeg">
+                <img src="images/Bathroom renovation4.jpeg">
+                <img src="images/Bathroom renovation5.jpeg">
+                <img src="images/Bathroom renovation6.jpeg">
+                <button class="hide-btn" onclick="toggleProject(13)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Fitting artificial grass1.jpeg" alt="Artificial grass fitting">
+            <div class="project-info">
+                <h3>Fitting artificial grass</h3>
+                <p>Smooth leveling, low-maintenance finish.</p>
+                <button id="btn-more-14" class="view-btn" onclick="toggleProject(14)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project14-gallery">
+                <img src="images/Fitting artificial grass1.jpeg">
+                <img src="images/Fitting artificial grass2.jpeg">
+                <video controls><source src="videos/Fitting artificial grass.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(14)">Hide</button>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Tiling1.jpeg" alt="Tiling services">
+            <div class="project-info">
+                <h3>Tiling</h3>
+                <p>Precision tiling, clean grout lines.</p>
+                <button id="btn-more-15" class="view-btn" onclick="toggleProject(15)">View More</button>
+            </div>
+            <div class="hidden-gallery" id="project15-gallery">
+                <img src="images/Tiling1.jpeg">
+                <img src="images/Tiling2.jpeg">
+                <img src="images/Tiling3.jpeg">
+                <img src="images/Tiling4.jpeg">
+                <video controls><source src="videos/project15.mp4" type="video/mp4"></video>
+                <button class="hide-btn" onclick="toggleProject(15)">Hide</button>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -705,18 +1013,43 @@
     <div class="cta-content">
         <h2 class="cta-title">Ready to Transform Your Home?</h2>
         <p class="cta-desc">Get a free consultation and quote for your renovation project today. Quality work guaranteed.</p>
+        
         <a href="tel:0830896669" class="cta-btn"><i class="fas fa-phone"></i> Call Now: 083 089 6669</a>
+        
+        <div class="cta-secondary-actions">
+            <a href="https://wa.me/353830896669" class="cta-sub-btn cta-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:ramireland79@gmail.com" class="cta-sub-btn cta-email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+        </div>
     </div>
 </section>
 
 <footer class="footer">
-    <div class="footer-logo">🏠 ELEVATE HOME RENOVATION</div>
-    <div class="footer-contact">
-        <a href="tel:0830896669"><i class="fas fa-phone"></i> 083 089 6669</a>
-        <a href="mailto:ramiireland79@gmail.com"><i class="fas fa-envelope"></i> ramiireland79@gmail.com</a>
-        <a href="#"><i class="fas fa-map-marker-alt"></i> Cork City, Ireland</a>
+    <div class="footer-logo-container">
+        <img src="images/logo.jpeg" alt="Elevate Home Renovation - Cork" class="footer-logo-img">
+        <div class="footer-logo-text">ELEVATE HOME RENOVATION</div>
     </div>
-    <div class="copyright">© 2026 Elevate Home Renovation. All rights reserved. | Trusted Renovation Experts in Cork</div>
+    
+    <div class="footer-contact">
+        <a href="tel:0830896669">
+            <i class="fas fa-phone"></i> 083 089 6669
+        </a>
+        
+        <a href="mailto:ramiireland79@gmail.com">
+            <i class="fas fa-envelope"></i> ramiireland79@gmail.com
+        </a>
+        
+        <div class="location-item">
+            <i class="fas fa-map-marker-alt"></i> Cork City, Ireland
+        </div>
+    </div>
+    
+    <div class="copyright">
+        © 2026 Elevate Home Renovation. All rights reserved. | The Renovation Experts in Cork
+    </div>
 </footer>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
@@ -725,17 +1058,54 @@
 </div>
 
 <script>
-    function goHome() { window.scrollTo({ top: 0, behavior: "smooth" }); location.reload(); }
-    function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
-    function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = 'auto'; }
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
-    
-    function toggleProject(id) {
-        const gallery = document.getElementById(id);
-        gallery.classList.toggle('active');
-        gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Handles scrolling smoothly to the top and refreshing the landing page
+    function goHome() { 
+        window.scrollTo({ top: 0, behavior: "smooth" }); 
+        location.reload(); 
     }
     
+    // Lightbox System for full-screen photo popups
+    function openLightbox(src) { 
+        document.getElementById('lightbox-img').src = src; 
+        document.getElementById('lightbox').classList.add('active'); 
+        document.body.style.overflow = 'hidden'; 
+    }
+    
+    function closeLightbox() { 
+        document.getElementById('lightbox').classList.remove('active'); 
+        document.body.style.overflow = 'auto'; 
+    }
+    
+    document.addEventListener('keydown', function(e) { 
+        if (e.key === 'Escape') closeLightbox(); 
+    });
+    
+    // New Isolated Project Gallery Toggle Logic
+    function toggleProject(projectId) {
+        const targetGallery = document.getElementById('project' + projectId + '-gallery');
+        const viewMoreBtn = document.getElementById('btn-more-' + projectId);
+        
+        if (!targetGallery.classList.contains('active')) {
+            // Expand the targeted gallery grid and hide its corresponding "View More" button
+            targetGallery.classList.add('active');
+            viewMoreBtn.style.display = 'none';
+            
+            // Smoothly scrolls down slightly so the new content rolls perfectly into view
+            targetGallery.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+            // Safely tucks the extra photos back up out of sight
+            targetGallery.classList.remove('active');
+            viewMoreBtn.style.display = 'block';
+            
+            // Finds the main parent card element to gently slide the user back up to the card title
+            const parentCard = targetGallery.closest('.project-card');
+            if (parentCard) {
+                parentCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    }
+    
+    // Intersection Observer for professional scroll-fade animations
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -745,6 +1115,7 @@
             }
         });
     }, observerOptions);
+    
     document.querySelectorAll('.project-card, .service-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
