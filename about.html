@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Elevate Home Renovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	    <meta name="description" content="Premium home renovation services in Cork City & surrounding areas. Expert builders, kitchen & bathroom renovation, landscaping, painting, tiling & more. Free quotes!">
+    <meta name="keywords" content="home renovation Cork, builders Cork, bathroom renovation Cork, kitchen renovation Cork, garden landscaping Cork, painting services Cork, tiling Cork, construction Cork">
+    <meta name="author" content="Elevate Home Renovation">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="geo.region" content="IE-CO">
+    <meta name="geo.placename" content="Cork City">
+    <meta name="geo.position" content="51.8985;-8.4756">
+    <meta name="ICBM" content="51.8985, -8.4756">
+    <link rel="canonical" href="https://www.elevaterenovation.ie/">
+	<link rel="icon" type="images/jpeg" href="./images/logo.jpeg">
+    
+    <!-- ========== SOCIAL MEDIA & OPEN GRAPH (Facebook/LinkedIn) ========== -->
+    <meta property="og:title" content="Elevate Home Renovation - Quality Renovations in Cork">
+    <meta property="og:description" content="Transform your home with Elevate: building, renovation, garden, decor, plumbing & electrical. Serving Cork City & villages. Call today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.elevaterenovation.ie/">
+    <meta property="og:image" content="https://www.elevaterenovation.ie/images/og-home-renovation-cork.jpg">
+    <meta property="og:image:alt" content="Elevate Home Renovation project showcase in Cork">
+    <meta property="og:site_name" content="Elevate Home Renovation">
+    <meta property="og:locale" content="en_IE">
+    
+    <!-- ========== TWITTER CARD ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elevate Home Renovation - Cork's Trusted Renovation Experts">
+    <meta name="twitter:description" content="Expert building, renovation, gardening & decorating in Cork City. Free estimates, quality guaranteed.">
+    <meta name="twitter:image" content="https://www.elevaterenovation.ie/images/twitter-renovation-cork.jpg">
+    
+    
+    <style>
+        :root { 
+            --light-bg: #f4f1ea; 
+            --dark: #1a1a1a; 
+            --logo-grey: #666666; 
+            --border-color: rgba(26, 26, 26, 0.40);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--light-bg); 
+            color: var(--dark); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+        }
+        
+        /* ========== HEADER SECTION ========== */
+        .header {
+            background: var(--light-bg); 
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: 2px;
+        }
+        
+        /* ========== NAVIGATION TABS ========== */
+        .nav-tabs {
+            display: flex;
+            gap: 20px;
+            margin-left: 30px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--logo-grey);
+            padding: 6px 4px;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease, border-color 0.2s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: var(--dark);
+        }
+
+        .nav-link.active {
+            color: var(--dark);
+            border-bottom: 2px solid var(--dark); 
+        }
+        
+        .header-contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .phone-btn {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-btn:hover {
+            background: var(--logo-grey);
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .quick-icon-btn {
+            font-size: 12px; 
+            font-weight: 700; 
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: all 0.2s ease-in-out;
+            background-color: transparent;
+        }
+
+        .quick-icon-btn.whatsapp-color {
+            color: #1ebea5; 
+            border: 2px solid #1ebea5; 
+        }
+        .quick-icon-btn.whatsapp-color:hover {
+            background-color: #1ebea5;
+            color: #ffffff;
+        }
+
+        .quick-icon-btn.email-color {
+            color: var(--dark); 
+            border: 2px solid var(--dark); 
+        }
+        .quick-icon-btn.email-color:hover {
+            background-color: var(--dark);
+            color: #ffffff;
+        }
+        
+        /* ========== LOCATION BAR ========== */
+        .location-bar {
+            background: var(--dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* ========== ABOUT CONTENT SPECIFIC LAYOUTS ========== */
+        .about-hero {
+            padding: 80px 20px 40px;
+            text-align: center;
+            background: var(--light-bg);
+        }
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+        .about-story {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+        .about-story h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        .about-story p {
+            color: #222222;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .value-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .value-card i {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        .value-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .value-card p {
+            font-size: 14px;
+            color: #444444;
+            line-height: 1.6;
+        }
+
+        /* ========== CALL TO ACTION SECTION ========== */
+        .cta-section {
+            padding: 90px 20px;
+            text-align: center;
+            background: var(--light-bg);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .cta-desc {
+            font-size: 16px;
+            color: #1a1a1a;
+            margin-bottom: 35px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+        
+        .cta-btn {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 16px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-bottom: 20px; 
+        }
+        
+        .cta-btn:hover {
+            background: var(--logo-grey);
+            transform: scale(1.03);
+        }
+
+        .cta-secondary-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .cta-sub-btn {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease-in-out;
+            background-color: transparent;
+        }
+
+        .cta-sub-btn.cta-whatsapp {
+            color: #1ebea5;
+            border: 2px solid #1ebea5;
+        }
+        .cta-sub-btn.cta-whatsapp:hover {
+            background-color: #1ebea5;
+            color: #ffffff;
+        }
+
+        .cta-sub-btn.cta-email {
+            color: var(--dark);
+            border: 2px solid var(--dark);
+        }
+        .cta-sub-btn.cta-email:hover {
+            background-color: var(--dark);
+            color: #ffffff;
+        }
+        
+        /* ========== COMPACT FOOTER LOGO SYSTEM ========== */
+        .footer {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        .footer-logo-img {
+            width: 45px;
+            height: 45px;
+            min-width: 45px; 
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 2px;
+            white-space: nowrap; 
+        }
+        
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        
+        .footer-contact a,
+        .footer-contact .location-item {
+            color: rgba(255,255,255,0.85); 
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .footer-contact a:hover { color: #ffffff; }
+        .footer-contact i { font-size: 15px; color: #ffffff; }
+        .copyright { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 400; }
+        
+        /* ========== RESPONSIVENESS SYSTEM ========== */
+        @media (max-width: 768px) {
+            .phone-btn { padding: 8px 15px; font-size: 12px; }
+            .logo-text { font-size: 18px; }
+            .section-title { font-size: 26px; }
+            .about-story { padding: 30px 20px; }
+            .footer { padding: 35px 15px; }
+            .footer-logo-text { font-size: 18px; }
+            .footer-contact { gap: 20px; }
+            .footer-contact a, .footer-contact .location-item { font-size: 13px; }
+        }
+
+        @media (max-width: 480px) {
+            .header { padding: 10px 12px; }
+            .logo-text { font-size: 15px; }
+            .logo-img { width: 35px; height: 35px; }
+            .phone-btn { padding: 6px 12px; font-size: 11px; }
+            .nav-tabs { margin-left: 10px; gap: 10px; }
+            .nav-link { font-size: 12px; }
+            .cta-secondary-actions { gap: 10px; padding: 0 10px; }
+            .cta-sub-btn { font-size: 12px; padding: 8px 12px; }
+            .quick-icon-btn { font-size: 11px; padding: 5px 8px; border-width: 2px; }
+            .footer-logo-text { font-size: 14px; letter-spacing: 1px; }
+            .footer-logo-img { width: 35px; height: 35px; min-width: 35px; }
+            .footer-contact { flex-direction: column; gap: 15px; }
+            .footer-contact a, .footer-contact .location-item { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-section">
+            <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                <img src="images/logo.jpeg" alt="Elevate Home Renovation Logo" class="logo-img">
+                <span class="logo-text">ELEVATE</span>
+            </a>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About Us</a>
+            </nav>
+        </div>
+
+        <div class="header-contact-container">
+            <a href="tel:0830896669" class="phone-btn"><i class="fas fa-phone"></i> 083 089 6669</a>
+            <div class="quick-links-grid">
+                <a href="https://wa.me/353830896669" class="quick-icon-btn whatsapp-color" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:ramireland79@gmail.com" class="quick-icon-btn email-color"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="location-bar">
+        <i class="fas fa-globe"></i> Serving Cork City, Douglas, Ballincollig, Carrigaline, Midleton & Nearby Villages
+    </div>
+
+    <section class="about-hero">
+        <h1 class="section-title">About Our Company</h1>
+        <p class="section-subtitle">Delivering high-end home renovations with premium craftsmanship across Cork.</p>
+    </section>
+
+    <main class="about-container">
+        <div class="about-story">
+            <h2>Who We Are</h2>
+            <p>At Elevate Home Renovation, we believe that your home should be a direct reflection of your lifestyle, comfort, and taste. Based in Cork, we specialize in high-quality property improvements, space transformations, and general home modernization services built to stand the test of time.</p>
+            <p>Our dedicated approach prioritizes transparent timelines, professional-grade execution, and clean, meticulous attention to detail on every single trade project—whether it's custom paneling, tailored garden structural additions, structural maintenance, or comprehensive interior renovations.</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-award"></i>
+                <h3>Uncompromising Quality</h3>
+                <p>We approach every cut, frame, and finish with maximum precision, utilizing premium building materials.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Trusted & Reliable</h3>
+                <p>Transparent quotes, practical consultations, on-time project arrivals, and dependable communication throughout.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>100% Local Service</h3>
+                <p>Proudly serving communities across Cork City, commuter suburbs, and regional local areas.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Transform Your Home?</h2>
+            <p class="cta-desc">Get a free consultation and quote for your renovation project today. Quality work guaranteed.</p>
+            <a href="tel:0830896669" class="cta-btn"><i class="fas fa-phone"></i> Call Now: 083 089 6669</a>
+            <div class="cta-secondary-actions">
+                <a href="https://wa.me/353830896669" class="cta-sub-btn cta-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:ramireland79@gmail.com" class="cta-sub-btn cta-email"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo-container">
+            <img src="images/logo.jpeg" alt="Elevate Logo" class="footer-logo-img">
+            <span class="footer-logo-text">ELEVATE HOME RENOVATION</span>
+        </div>
+        <div class="footer-contact">
+            <a href="tel:0830896669"><i class="fas fa-phone"></i> 083 089 6669</a>
+            <a href="mailto:ramireland79@gmail.com"><i class="fas fa-envelope"></i> ramireland79@gmail.com</a>
+            <div class="location-item"><i class="fas fa-map-marker-alt"></i> Cork City, Ireland</div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Elevate Home Renovation. All rights reserved. | Trusted Renovation Experts in Cork
+        </div>
+    </footer>
+
+</body>
+</html>
